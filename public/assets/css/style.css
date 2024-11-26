@@ -1,0 +1,169 @@
+@font-face {
+    font-family: poppins-regular;
+    src: url("../fonts/Poppins-Regular.otf");
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url("../fonts/Poppins-Medium.otf");
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url("../fonts/Poppins-Bold.otf");
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background: #FAFBFF;
+    font-family: poppins-medium;
+}
+
+#header .logo-salesproduct {
+    width: 100%;
+    max-width: 428px;
+}
+
+#header .mySwiper {
+    height: 220px;
+}
+
+#header .mySwiper img {
+    width: 100%;
+    max-width: 350px;
+}
+
+#header .mySwiper .swiper-pagination {
+    bottom: 0;
+}
+
+#header .mySwiper .swiper-pagination-bullet {
+    background: #235DB0;
+}
+
+#content .mycontainer {
+    background: #fff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 6px #f3f3f378;
+    box-shadow: 0px 5px 6px #f3f3f378;
+}
+
+#content .nav-tabs {
+    border-bottom: 1px solid #1873B066;
+}
+
+#content .nav-item {
+    margin: 0px;
+    margin-bottom: 0 !important;
+    width: 33%;
+    text-align: center;
+}
+
+#content .nav-item .nav-link {
+    color: #235DB0;
+    color: rgba(35, 93, 176, 0.55);
+    font-family: poppins-bold;
+    border: none;
+    background: none;
+}
+
+#content .nav-item .nav-link.active {
+    border-bottom: 5px solid #235DB0;
+    color: #235DB0;
+}
+
+#content .accordion .card {
+    border: none;
+}
+
+#content .accordion .card a {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#content .accordion .card a:hover {
+    opacity: 0.85;
+}
+
+#content .accordion .card .btn-default,
+#content .accordion .card .btn-default:focus {
+    background: transparent linear-gradient(98deg, #204496 0%, #2EABFF 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    border-radius: 8px;
+    font-family: poppins-medium;
+    width: 130px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#content .accordion .card .card-header {
+    background: transparent linear-gradient(92deg, #204496 0%, #2EABFF 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    height: 50px;
+}
+
+#content .accordion .card .card-header button,
+#content .accordion .card .card-header button:focus-visible,
+#content .accordion .card .card-header button:focus {
+    font-family: poppins-bold;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    line-height: 0.8;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#content .accordion .card .card-body {
+    margin-top: 20px;
+}
+
+#content .accordion .card .card-body img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#content .accordion .card .card-body h1 {
+    font-family: poppins-bold;
+    font-size: 18px;
+    color: #235DB0;
+}
+
+#content .accordion .card .card-body h3 {
+    font-family: poppins-bold;
+    font-size: 16px;
+    color: #235DB0;
+}
+
+#content .accordion .card .card-body p {
+    font-family: poppins-regular;
+    font-size: 14px;
+    color: #555555;
+}
+
+#content .accordion .card .card-body ol {
+    padding-left: 20px;
+}
+
+#content .accordion .card .card-body ol li {
+    font-family: poppins-regular;
+    font-size: 14px;
+    color: #555555;
+}
+
+@media (max-width: 480px) {
+    #header .logo-salesproduct {
+        max-width: 260px;
+    }
+
+    #content .mycontainer {
+        padding: 1.5rem;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
