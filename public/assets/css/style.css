@@ -61,27 +61,8 @@ body {
     left: -10px;
 }
 
-#platform-contents.show .tab-pane {
-    /* width: 400px; */
-    /* height: 100vh;
-    overflow-y: scroll; */
-}
-
-#platform-contents.show .tab-pane::-webkit-scrollbar {
-    /* display: none; */
-}
-
-#platform-contents.show .tab-content:hover .tab-pane::-webkit-scrollbar {
-    /* display: block; */
-}
-
 #platform-contents .b-select.selected {
     background-color: #e2e2e2;
-    /* color: white; */
-}
-
-#platform-tabs.show {
-    /* left: 0; */
 }
 
 .previewer {
