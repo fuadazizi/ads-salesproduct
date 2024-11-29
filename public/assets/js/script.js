@@ -48,14 +48,24 @@ function FunctionSearch() {
 }
 
 $(window).on('scroll', function() {
-    const tabs = $('#platform-tabs');
-    const tabsTop = tabs.offset().top - $(window).scrollTop();
+    // const tabs = $('#platform-tabs');
+    // const tabsTop = tabs.offset().top - $(window).scrollTop();
 
-    if (tabsTop <= 0) {
-        tabs.css("max-width", "100%");
+    // if (tabsTop <= 0) {
+    //     tabs.css("max-width", "100%");
+    // } else {
+    //     tabs.css("max-width", "");
+    // }
+
+    const sidebar = $('.sidebar');
+    const sidebarTop = sidebar.offset().top - $(window).scrollTop() - 90;
+
+    if (sidebarTop <= 0) {
+        $("nav").addClass("scrolled");
     } else {
-        tabs.css("max-width", "");
+        $("nav").removeClass("scrolled");
     }
+
 });
 
 // change banner previewed

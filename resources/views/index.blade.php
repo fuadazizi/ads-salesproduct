@@ -25,18 +25,18 @@
 </head>
 
 <body>
-    <header class="container mt-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="/">
+    <header class="position-sticky top-0">
+        <nav class="navbar navbar-light bg-body-tertiary">
+            <div class="container">
+                <a href="/" style="margin: 4px 0 4px auto;">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="logo-salesproduct"
-                    class="logo-salesproduct mb-5" style="width: 100%; max-width: 350px;">
+                        class="logo-salesproduct" style="width: 100%;">
                 </a>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main class="container mt-4">
+    <main class="d-flex align-item-stretch" style="min-height: 100vh;">
         <!-- <div class="row justify-content-center">
             <div class="col-lg-9 mb-3">
                 <div class="input-group mb-4 p-2 rounded-pill shadow border border-dark">
@@ -104,12 +104,14 @@
             {{-- @include('partials/brand-reminder') --}}
         </div>
 
+        <!-- <div class="tab-content col-12"> -->
+        <!-- </div> -->
 
         <!-- Banner -->
-        <div class="row" id="allbanner">
-            <div class="col-md-12 mb-5 position-absolute p-0 start-0">
-                <!-- Tabs navs Each Platform -->
-                <ul class="container main-container nav nav-tabs nav-justified mb-3 position-sticky top-0 bg-white p-0" id="platform-tabs" role="tablist" style="z-index: 999;">
+        @include ('partials/sidebar_v2')
+        <div class="col-md-12 mb-5 position-absolute p-0 start-0">
+            <!-- Tabs navs Each Platform -->
+            <!-- <ul class="container main-container nav nav-tabs nav-justified mb-3 position-sticky top-0 bg-white p-0" id="platform-tabs" role="tablist" style="z-index: 999;">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="bnr-tab-1" data-mdb-toggle="tab" href="#bnr-tabs-1" role="tab" aria-controls="bnr-tabs-1" aria-selected="true"><i class="fa-solid fa-desktop"></i> Desktop</a>
                     </li>
@@ -119,52 +121,12 @@
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" id="bnr-tab-3" data-mdb-toggle="tab" href="#bnr-tabs-3" role="tab" aria-controls="bnr-tabs-3" aria-selected="false"><i class="fa-solid fa-mobile"></i> Apps</a>
                     </li>
-                </ul>
-                <!-- Tabs navs -->
-                <div class="container main-container mt-4 p-0 position-relative" id="platform-contents">
-                    <!-- Tabs content Each Platform -->
-                    <div class="tab-content col-12">
-                        @foreach (range(1, 3) as $i)
-                        <div class="tab-pane fade show {{ $loop->first ? 'active': ''}}" id="bnr-tabs-{{ $i }}" role="tabpanel" aria-labelledby="bnr-tab-{{ $i }}">
-                            <div class="accordion" id="accordion-{{ $i }}">
-                                @foreach($listposition->where('id_platform', $i) as $pos)
-                                <div class="accordion-item border-0 mb-2">
-                                    <h2 class="accordion-header" id="heading{{ $pos->id_slot }}">
-                                        <button class="accordion-button rounded-4 collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapse{{ $pos->id_slot }}" aria-expanded="true" aria-controls="collapse{{ $pos->id_slot }}" value="{{ $pos->id_slot }}" name="banneritem">
-                                            {{ $pos->slot_name }}
-                                        </button>
-                                    </h2>
-                                    <div id="collapse{{ $pos->id_slot }}" class="accordion-collapse collapse" aria-labelledby="heading{{ $pos->id_slot }}" data-mdb-parent="#accordion-{{ $i }}">
-                                        <div class="accordion-body p-1">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                @foreach ($joinbanner->where('id_slot', $pos->id_slot ) as $banner)
-                                                <li class="nav-item w-100" role="presentation">
-                                                    <p class="nav-link ps-5 py-3 b-select"
-                                                        id="bnr-{{ $banner->id }}"
-                                                        data-name="{{ $banner->name }}"
-                                                        data-platform="{{ $banner->platform }}"
-                                                        data-tyebanner="{{ $banner->typebanner }}"
-                                                        data-positionused="{{ $banner->positionused }}"
-                                                        data-rulesize="{{ $banner->rulesize }}"
-                                                        data-buying="{{ $banner->buying }}"
-                                                        data-scenario="{{ $banner->scenario }}"
-                                                        data-image="{{ $banner->image }}"
-                                                        data-id_cpm="{{ $banner->id_cpm }}"> {{ $banner->name }}
-                                                    </p>
-                                                </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="previewer position-absolute col-12 col-lg-9 bg-white" style="z-index:-1">
-                        @include ('partials/previewer')
-                    </div>
+                </ul> -->
+            <!-- Tabs navs -->
+            <div class="container main-container mt-4 p-0 position-relative" id="platform-contents">
+                <!-- Tabs content Each Platform -->
+                <div class="previewer position-absolute col-12 col-lg-9 bg-white" style="z-index:-1">
+                    @include ('partials/previewer')
                 </div>
             </div>
         </div>
