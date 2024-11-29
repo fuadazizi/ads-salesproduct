@@ -85,4 +85,8 @@ class AdsController extends Controller
             'newbannerM'
         ));        
     }
+
+    public function comingsoon() {
+        return view('comingsoon');
+    }
 }
