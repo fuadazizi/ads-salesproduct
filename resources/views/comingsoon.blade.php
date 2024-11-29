@@ -26,11 +26,11 @@
 
 <body>
     <img src="{{ asset('assets/images/logo.png') }}" alt="logo-salesproduct"
-        class="logo-salesproduct" style="width: 250px; position: absolute; margin: 20px auto; left: 0; right: 0;">
+        class="logo-salesproduct" style="">
 
     <center class="d-flex align-items-center flex-column justify-content-center" style="height: 100vh;">
-        <h1 class="text-dark" style="font-weight: bold; font-size: 80px"> Great things coming soon. </h1>
-        <p style="font-weight: regular; margin-top: 24px">Kindly reach out to our sales team to request your personalized preview link.</p>
+        <h1 class="text-dark" style=""> Great things coming soon. </h1>
+        <p style="">Kindly reach out to our sales team to request your personalized preview link.</p>
         <a href="mailto:sales@detik.com" target="_blank"> <button style="">Contact Us</button> </a>
     </center>
 </body>

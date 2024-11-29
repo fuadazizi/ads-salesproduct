@@ -30,24 +30,59 @@ body {
 }
 
 @-webkit-keyframes BGBlue {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
+
 @-moz-keyframes BGBlue {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
+
 @-o-keyframes BGBlue {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
+
 @keyframes BGBlue {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
 
 button {
@@ -61,4 +96,60 @@ button {
 
 button:hover {
     /* background: #3c70d9; */
+}
+
+img {
+    width: 250px;
+    position: absolute;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 80px;
+    padding-inline: 60px;
+}
+
+p {
+    font-family: poppins-regular;
+    margin-top: 24px;
+    padding-inline: 44px;
+}
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 44px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    img {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 34px;
+        padding-inline: 40px;
+    }
+
+    p {
+        font-size: 12px;
+    }
 }
