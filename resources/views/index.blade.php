@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <header class="position-sticky top-0">
+    <header class="position-fixed w-100 top-0">
         <nav class="navbar navbar-light bg-body-tertiary">
             <div class="container">
                 <a href="/" style="margin: 4px 0 4px auto;">
@@ -36,7 +36,7 @@
         </nav>
     </header>
 
-    <main class="d-flex align-item-stretch" style="min-height: 100vh;">
+    <main class="d-flex align-item-stretch" style="">
         <!-- <div class="row justify-content-center">
             <div class="col-lg-9 mb-3">
                 <div class="input-group mb-4 p-2 rounded-pill shadow border border-dark">
@@ -123,11 +123,9 @@
                     </li>
                 </ul> -->
             <!-- Tabs navs -->
-            <div class="container main-container mt-4 p-0 position-relative" id="platform-contents">
+            <div class="container main-container p-0 position-relative" id="platform-contents">
                 <!-- Tabs content Each Platform -->
-                <div class="previewer position-absolute col-12 col-lg-9 bg-white" style="z-index:-1">
                     @include ('partials/previewer')
-                </div>
             </div>
         </div>
         <!-- Tabs content -->

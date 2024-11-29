@@ -13,12 +13,16 @@
     src: url("../fonts/Poppins-Bold.otf");
 }
 
+html, body, main {
+    height: 100%;
+}
+
 html {
     scroll-behavior: smooth !important;
 }
 
 body {
-    background: #f9fdff;
+    background: #f7fcff;
     font-family: poppins-medium !important;
     overflow-x: hidden;
 }
@@ -85,7 +89,7 @@ header {
     background-color: white;
     width: fit-content;
     z-index: 2;
-    /* top: -24px; */
+    /* top: 24px; */
 }
 
 .sidebar #accordion-platform {
@@ -93,20 +97,17 @@ header {
     top: 68px;
 }
 
-.sidebar .platform {
-    /* width: 200px !important;
-    left: 70px;
-    position: absolute;
-    top: 0;
-    background: white; */
-}
-
-.sidebar .preview {
-    /* left: 200px; */
-}
-
 .sidebar .accordion-body {
     width: 250px;
+}
+
+.sidebar .platform::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+}
+
+.sidebar .platform {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
 
 .sidebar .preview p {
