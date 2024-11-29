@@ -28,8 +28,10 @@
     <header class="container mt-5">
         <div class="row">
             <div class="col-12 text-center">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="logo-salesproduct"
+                <a href="/">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo-salesproduct"
                     class="logo-salesproduct mb-5" style="width: 100%; max-width: 350px;">
+                </a>
             </div>
         </div>
     </header>
