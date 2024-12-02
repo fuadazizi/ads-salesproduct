@@ -30,7 +30,7 @@
     <main class="" style="">
 
         <!-- Banner -->
-        @if (Route::is('pages'))
+        @if (Route::is('banners'))
         @include('partials/sidebar_banner')
         @elseif (Route::is('performances'))
         @include('partials/sidebar_performance')
