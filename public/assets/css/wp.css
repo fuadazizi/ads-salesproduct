@@ -20,6 +20,11 @@ body {
     padding: 40px 40px 0 40px;
     background: linear-gradient(282.76deg, #9143fe 12.61%, #3677ff 81.97%);
     overflow: hidden;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 .wp-container .wp-container-text .image-brand img {
     width: 200px;
@@ -99,11 +104,14 @@ body {
 .wp-container .wp-container-image {
     width: 100%;
     height: 30vh;
-    /* background: #fff; */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .wp-container .wp-container-image img {

@@ -24,8 +24,7 @@
     function closeWP() {
         document.getElementById("wpContainerText").style.height = "0px";
         document.getElementById("wpContainerText").style.padding = "0px";
-        // document.getElementById("wpContainerImage").style.overflow = "hidden";
-        document.querySelector("#wpContainerImage img").style.marginTop = "800px";
+        document.querySelector("#wpContainerImage img").style.marginTop = "700px";
         console.log("clicked");
     }
 </script>
