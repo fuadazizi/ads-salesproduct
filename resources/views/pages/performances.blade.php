@@ -25,22 +25,32 @@
 </head>
 
 <body>
-
     @include ('partials/navbar')
-    <main class="" style="">
 
-        <!-- Banner -->
-        @if (Route::is('pages'))
-        @include('partials/sidebar_banner')
-        @elseif (Route::is('performances'))
-        @include('partials/sidebar_performance')
-        @endif
+    <main class="d-flex align-item-stretch" style="">
 
+        <!-- Performances -->
+        @include ('partials/sidebar_v2')
         <div class="col-md-12 mb-5 position-absolute p-0 start-0">
+            <!-- Tabs navs Each Platform -->
+            <!-- <ul class="container main-container nav nav-tabs nav-justified mb-3 position-sticky top-0 bg-white p-0" id="platform-tabs" role="tablist" style="z-index: 999;">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="bnr-tab-1" data-mdb-toggle="tab" href="#bnr-tabs-1" role="tab" aria-controls="bnr-tabs-1" aria-selected="true"><i class="fa-solid fa-desktop"></i> Desktop</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="bnr-tab-2" data-mdb-toggle="tab" href="#bnr-tabs-2" role="tab" aria-controls="bnr-tabs-2" aria-selected="false"><i class="fa-solid fa-mobile-alt"></i> Mobile</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="bnr-tab-3" data-mdb-toggle="tab" href="#bnr-tabs-3" role="tab" aria-controls="bnr-tabs-3" aria-selected="false"><i class="fa-solid fa-mobile"></i> Apps</a>
+                    </li>
+                </ul> -->
+            <!-- Tabs navs -->
             <div class="container main-container p-0 position-relative" id="platform-contents">
-                @include ('partials/previewer')
+                <!-- Tabs content Each Platform -->
+                    @include ('partials/previewer')
             </div>
         </div>
+        <!-- Tabs content -->
         <center class="mb-5" id="empty-notice" style="display: none; height: 450px; padding-top: 45px;">
             <img class="mb-3" src="images/man-box.png" width="300">
             <p> No data match. <br> Please check again. </p>

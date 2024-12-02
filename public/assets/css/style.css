@@ -75,21 +75,18 @@ header {
 
 /* Navbar & Sidebar */
 
-.navbar a {
-    margin-right: 0 !important;
-}
-
 .navbar img {
     max-width: 150px !important;
 }
 
 .sidebar {
-    position: relative;
+    position: fixed;
     left: 0;
     background-color: white;
     width: fit-content;
     z-index: 2;
-    /* top: 24px; */
+    top: 4.5rem;
+    height: 100%;
 }
 
 .sidebar #accordion-platform {

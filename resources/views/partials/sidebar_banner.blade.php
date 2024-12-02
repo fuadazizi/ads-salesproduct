@@ -2,7 +2,7 @@
     <div class="accordion" id="accordion-platform">
         @foreach (range(1, 3) as $i)
         <!-- <div class="tab-pane fade show {{ $loop->first ? 'active': ''}}" id="bnr-tabs-{{ $i }}" role="tabpanel" aria-labelledby="bnr-tab-{{ $i }}"> -->
-        <div class="accordion-item rounded-0" style="width: 70px; border: none;">
+        <div class="accordion-item rounded-0" style="border: none;">
             <h2 class="accoridon-header mb-0" id="headplatform-{{ $i }}">
                 <button class="accordion-button rounded-0 collapsed bg-white" type="button" data-mdb-toggle="collapse" data-mdb-target="#colplatform-{{ $i }}" aria-expanded="false" aria-controls="colplatform-{{ $i }}" value="{{ $i }}">
                     @if ($i == 1) 

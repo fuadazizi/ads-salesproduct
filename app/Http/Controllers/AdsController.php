@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\banners;
 use App\Models\position_used;
+use App\Models\performances;
 
 class AdsController extends Controller
 {
-    public function index(Request $request)
+    public function banners(Request $request)
     {
         // $listbanner = banners::orderBy('id','asc')->paginate(10);
         $listbanner = banners::where('betterads', 'block')
@@ -83,10 +86,60 @@ class AdsController extends Controller
             'joinbanner',
             'newbannerD',
             'newbannerM'
-        ));        
+        ));
     }
 
-    public function comingsoon() {
-        return view('comingsoon');
+    public function performances(Request $request)
+    {
+        // Mapping of identifiers to readable names
+        $cpmMappings = [
+            'premiumdesktop' => 2,
+            'premiummobile' => 11,
+            'premiumapps' => 12,
+            'regulerdesktop' => 3,
+            'regulermobile' => 13,
+            'regulerapps' => 14,
+            'prerolldesktop' => 4,
+            'prerollmobile' => 15,
+            'prerollapps' => 0,
+            'outstreamPdesktop' => 5,
+            'outstreamPmobile' => 17,
+            'outstreamPapps' => 18,
+            'contextualD' => 29,
+            'contextualM' => 30,
+            'videooutD' => 6,
+            'videooutM' => 19,
+            'videooutA' => 20,
+            'nativeinD' => 8,
+            'nativeinM' => 25,
+            'nativeinA' => 26,
+            'nativeoutD' => 9,
+            'nativeoutM' => 27,
+            'nativeoutA' => 28,
+            'bannerCPCD' => 10,
+            'bannerCPCM' => 23,
+            'bannerCPCA' => 24,
+        ];
+    
+        $listperformance = [];
+    
+        // Generate data dynamically
+        foreach ($cpmMappings as $name => $id_cpm) {
+            $listperformance[$name] = DB::table('performances')
+                ->join('banners', 'performances.id_cpm', '=', 'banners.id_cpm')
+                ->where('performances.id_cpm', $id_cpm)
+                ->where('banners.betterads', 'block')
+                ->get();
+        }
+
+        // $listperformance = performances::join('banners', 'performances.id_cpm', '=', 'banners.id_cpm')
+        //     ->where('banners.betterads', 'block')
+        //     ->get();
+
+        // $listbanner = banners::whereIn('id_cpm', [2, 11, 12, 3, 13, 14, 4, 15, 16, 5, 17, 18, 29, 30, 6, 19, 20, 8, 25, 26, 9, 27, 28, 10, 23, 24])->get();
+
+        return view('index', compact(
+            'listperformance'
+        ));
     }
 }
