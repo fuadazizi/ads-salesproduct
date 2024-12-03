@@ -30,27 +30,22 @@
 
 <body>
 
-    @include('partials/wp')
+    <div class="welcome">
+        @include('partials/wp')
+    </div>
 
-    {{-- <main class="" style=""> --}}
+    @include('partials/navbar')
 
-    {{-- <!-- Banner -->
-        @if (Route::is('banners'))
+    <main class="content" style="">
         @include('partials/sidebar_banner')
-        @elseif (Route::is('performances'))
         @include('partials/sidebar_performance')
-        @endif --}}
-
-    {{-- <div class="col-md-12 mb-5 position-absolute p-0 start-0">
+        
+        <div class="col-md-12 mb-5 position-absolute p-0 start-0">
             <div class="container main-container p-0 position-relative" id="platform-contents">
-                {{-- @include ('partials/previewer')
+                @include ('partials/previewer')
+            </div>
         </div>
-        </div>
-        <center class="mb-5" id="empty-notice" style="display: none; height: 450px; padding-top: 45px;">
-            <img class="mb-3" src="images/man-box.png" width="300">
-            <p> No data match. <br> Please check again. </p>
-        </center> --}}
-    {{-- </main> --}}
+    </main>
     <!-- SCRIPT -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
