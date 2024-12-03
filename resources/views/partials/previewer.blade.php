@@ -13,7 +13,7 @@
                 <h3>Platform</h3>
                 <p id="pbnr-platform">{platform}</p>
                 <h3>Position Used</h3>
-                <p id="pbnr-positionused">{positionused} </p>
+                <p id="pbnr-positionused">{positionused}</p>
                 <h3>Banner Specification</h3>
                 <ul class="ps-3" id="pbnr-rulesize">
                     {rulesize}

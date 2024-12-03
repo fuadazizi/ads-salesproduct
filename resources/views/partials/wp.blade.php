@@ -11,20 +11,11 @@
             </p>
         </div>
         <div class="button-cta">
-            <a href="#" class="btn-cta-primary" onclick="closeWP()">Explore Ad Options</a>
-            <a href="#" class="btn-cta-secondary">Text Button</a>
+            <a href="#" class="btn-cta-primary" onclick="openBanner()">Display Banner</a>
+            <a href="#" class="btn-cta-primary" onclick="openPerformance()">Performance Banner</a>
         </div>
     </div>
     <div class="wp-container-image" id="wpContainerImage">
         <img src="{{ asset('assets/images/image-sales-product-wp.png') }}" alt="" />
     </div>
 </div>
-
-<script>
-    function closeWP() {
-        document.getElementById("wpContainerText").style.height = "0px";
-        document.getElementById("wpContainerText").style.padding = "0px";
-        document.querySelector("#wpContainerImage img").style.marginTop = "700px";
-        console.log("clicked");
-    }
-</script>

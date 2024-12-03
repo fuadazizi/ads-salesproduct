@@ -1,4 +1,4 @@
-<header class="position-fixed w-100 top-0">
+<header class="position-fixed w-100">
     <nav class="navbar navbar-light bg-body-tertiary">
         <div class="position-absolute" style="left: 44px;">
             @if (Route::is('banners'))

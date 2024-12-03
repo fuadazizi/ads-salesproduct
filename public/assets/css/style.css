@@ -21,15 +21,10 @@ html {
     scroll-behavior: smooth !important;
 }
 
-body {
+body {  
     background: #f7fcff;
     font-family: poppins-medium !important;
     overflow-x: hidden;
-}
-
-header {
-    z-index: 3;
-    background-color: white;
 }
 
 * {
@@ -73,20 +68,34 @@ header {
     height: 0;
 }
 
-/* Navbar & Sidebar */
+/* S: Navbar & Sidebar */
 
-.navbar img {
+header {
+    z-index: 3;
+    background-color: white;
+    top: -100%;
+}
+
+header .navbar img {
     max-width: 150px !important;
 }
 
 .sidebar {
     position: fixed;
-    left: 0;
+    left: -100%;
     background-color: white;
     width: fit-content;
     z-index: 2;
     top: 4.5rem;
     height: 100%;
+    opacity: 0;
+    display: none;
+}
+
+.sidebar.show {
+    left: 0;
+    opacity: 1;
+    display: block;
 }
 
 .sidebar #accordion-platform {
@@ -116,7 +125,7 @@ header {
     cursor: pointer;
 }
 
-/* Sidebar */
+/* E: Navbar & Sidebar */
 
 /* Previewer Show */
 
