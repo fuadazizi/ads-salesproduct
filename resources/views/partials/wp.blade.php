@@ -12,7 +12,7 @@
         </div>
         <div class="button-cta">
             <a href="#" class="btn-cta-primary" onclick="openBanner()">Display Banner</a>
-            <a href="#" class="btn-cta-primary" onclick="openPerformance()">Performance Banner</a>
+            <a href="#" class="btn-cta-secondary" onclick="openPerformance()">Performance Banner</a>
         </div>
     </div>
     <div class="wp-container-image" id="wpContainerImage">
