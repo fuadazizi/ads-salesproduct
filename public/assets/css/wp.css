@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body {
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-}
-
 .wp-container {
     width: 100%;
     height: 100vh;
@@ -12,6 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.wp-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .wp-container .wp-container-text {
@@ -60,19 +61,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 32px;
 }
 
 .wp-container .wp-container-text .button-cta a.btn-cta-primary {
     background: #ef672f;
-    padding: 12px;
+    font-family: "Montserrat", serif;
+    padding: 8px 12px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     -webkit-border-radius: 4px;
+    border: 1px solid #ef672f;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
@@ -80,7 +84,8 @@ body {
 
 .wp-container .wp-container-text .button-cta a.btn-cta-secondary {
     background: transparent;
-    padding: 12px;
+    font-family: "Montserrat", serif;
+    padding: 8px 12px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -94,7 +99,8 @@ body {
 }
 
 .wp-container .wp-container-text .button-cta a.btn-cta-primary:hover {
-    background: #fd601d;
+    background: #f34900;
+    border: 1px solid #f34900;
 }
 
 .wp-container .wp-container-text .button-cta a.btn-cta-secondary:hover {
@@ -115,6 +121,38 @@ body {
 }
 
 .wp-container .wp-container-image img {
-    width: 800px;
-    margin-top: -280px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: -30vh;
+}
+
+@media screen and (max-width: 768px) {
+    .wp-container .wp-container-text {
+        padding: 16px 16px 0 16px;
+    }
+    .wp-container .wp-container-text .text h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wp-container .wp-container-text .text h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-height: 760px) {
+    .wp-container .wp-container-text .image-brand img {
+        margin-bottom: 24px;
+    }
+    .wp-container .wp-container-text {
+        height: 75vh;
+    }
+    .wp-container .wp-container-image {
+        height: 25vh;
+    }
+    .wp-container .wp-container-image img {
+        margin-top: -20vh;
+    }
 }
