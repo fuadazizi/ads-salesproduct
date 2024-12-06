@@ -16,10 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css" rel="stylesheet" />
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
@@ -30,24 +29,26 @@
 
 <body>
 
-    <div class="welcome">
+    <div class="welcome position-absolute w-100">
         @include('partials/wp')
     </div>
 
     @include('partials/navbar')
 
-    <main class="content" style="">
-        @include('partials/sidebar_banner')
-        @include('partials/sidebar_performance')
+    <main class="content d-flex" style="">
+        <div class="sidebars closed-panel tab-content">
+            @include('partials/sidebar_banner')
+            @include('partials/sidebar_performance')
+        </div>
         
-        <div class="col-md-12 mb-5 position-absolute p-0 start-0">
-            <div class="container main-container p-0 position-relative" id="platform-contents">
+        <div class="p-0 w-100" id="banner-contents">
+            <div class="container p-0 position-relative">
                 @include ('partials/previewer')
             </div>
         </div>
     </main>
     <!-- SCRIPT -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 

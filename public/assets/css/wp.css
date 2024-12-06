@@ -66,7 +66,7 @@
     margin-top: 32px;
 }
 
-.wp-container .wp-container-text .button-cta a.btn-cta-primary {
+.wp-container .wp-container-text .button-cta .btn-cta-primary {
     background: #ef672f;
     font-family: "Montserrat", serif;
     padding: 8px 12px;
@@ -82,7 +82,7 @@
     font-weight: 400;
 }
 
-.wp-container .wp-container-text .button-cta a.btn-cta-secondary {
+.wp-container .wp-container-text .button-cta .btn-cta-secondary {
     background: transparent;
     font-family: "Montserrat", serif;
     padding: 8px 12px;
@@ -98,12 +98,12 @@
     font-weight: 400;
 }
 
-.wp-container .wp-container-text .button-cta a.btn-cta-primary:hover {
+.wp-container .wp-container-text .button-cta .btn-cta-primary:hover {
     background: #f34900;
     border: 1px solid #f34900;
 }
 
-.wp-container .wp-container-text .button-cta a.btn-cta-secondary:hover {
+.wp-container .wp-container-text .button-cta .btn-cta-secondary:hover {
     background: #ffffff1e;
 }
 

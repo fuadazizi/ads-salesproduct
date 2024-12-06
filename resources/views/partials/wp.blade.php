@@ -11,8 +11,7 @@
             </p>
         </div>
         <div class="button-cta">
-            <a href="#" class="btn-cta-primary" onclick="openBanner()">Display Banner</a>
-            <a href="#" class="btn-cta-secondary" onclick="openPerformance()">Performance Banner</a>
+            <button class="btn-cta-primary" onclick="closeWP()">Explore Ad Option</button>
         </div>
     </div>
     <div class="wp-container-image" id="wpContainerImage">
