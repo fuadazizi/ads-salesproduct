@@ -3,7 +3,7 @@
         <div class="row">
             <h1 id="pbnr-name"> {name} </h1>
         </div>
-        <div class="row bg-white border border-secondary rounded-5 p-3">
+        <div class="row bg-white border border-secondary rounded-5 p-3 mx-0">
             <div class="col px-4" style="height: fit-content">
                 <div class="previewer-detail">
                     <h2>Rules and Specification</h2>
@@ -54,7 +54,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-12 col-md-5 d-flex flex-column align-items-center">
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center">
                 <img id="pbnr-image" src="https://cdnstatic.detik.com/live/html5/sales-product-source/8KCB.gif" alt="img">
                 <div class="dropdown select-channel text-center">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"

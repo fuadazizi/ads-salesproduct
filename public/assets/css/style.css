@@ -252,6 +252,7 @@ h3 {
 
 .previewer table ul {
     padding-left: 0 !important;
+    margin-bottom: 0;
 }
 
 .previewer table li {
